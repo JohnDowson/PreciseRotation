@@ -9,6 +9,10 @@ Copy the contents of the `plugins` folder from the zip file to `Valheim\BepinEx\
 - Gamepad support
 
 ## Changelog
+### 26.2.1
+- Added button to change axis in the other direction
+- Added a button to reset rotation on the current axis
+- Fixed spooky scary red log message
 ### 26.2.0
 - Changing rotation axis now pops up a nice large icon
 - Added gamepad support. Let me know if it doesn't work - I don't actually have a gamepad to test with.

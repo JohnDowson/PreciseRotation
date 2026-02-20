@@ -1,7 +1,7 @@
-﻿{
+{
   "name": "PreciseRotation",
   "description": "",
-  "version_number": "26.2.0",
+  "version_number": "26.2.1",
   "website_url": "",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2333",

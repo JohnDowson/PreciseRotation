@@ -1,6 +1,7 @@
 packages/
 libraries/
 Environment.props
-*/Package/plugins/*
+*/Package/plugins/
+*/Package/README.md
 */obj/
 */bin/
