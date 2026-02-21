@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 using BepInEx;
 using BepInEx.Configuration;
@@ -17,7 +18,7 @@ namespace PreciseRotation {
     internal class PreciseRotation : BaseUnityPlugin {
         public const string PluginGUID = "com.github.johndowson.PreciseRotation";
         public const string PluginName = "PreciseRotation";
-        public const string PluginVersion = "26.2.1";
+        public const string PluginVersion = "26.2.2";
         private static readonly Harmony harmony = new(PluginGUID);
 
 
@@ -51,6 +52,13 @@ namespace PreciseRotation {
             X = AssetUtils.LoadSpriteFromFile("PreciseRotation/Assets/axis_x.png");
             Y = AssetUtils.LoadSpriteFromFile("PreciseRotation/Assets/axis_y.png");
             Z = AssetUtils.LoadSpriteFromFile("PreciseRotation/Assets/axis_z.png");
+            X ??= AssetUtils.LoadSpriteFromFile("disregardthatisuck-PreciseRotation/PreciseRotation/Assets/axis_x.png");
+            Y ??= AssetUtils.LoadSpriteFromFile("disregardthatisuck-PreciseRotation/PreciseRotation/Assets/axis_y.png");
+            Z ??= AssetUtils.LoadSpriteFromFile("disregardthatisuck-PreciseRotation/PreciseRotation/Assets/axis_z.png");
+
+            if (new[] { X, Y, Z }.Any((s) => s is null)) {
+                Logger.LogWarning("Could not load axis icons. Are you using a weird mod manager?");
+            }
 
             ToggleRotation = Config.Bind("Controls", "ToggleRotation", false, "When `true` pressing RotationModifier button toggless precise mode on and off");
 
