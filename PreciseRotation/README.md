@@ -9,6 +9,8 @@ Copy the contents of the `plugins` folder from the zip file to `Valheim\BepinEx\
 - Gamepad support
 
 ## Changelog
+### 26.9.0
+- Recompiled for Valheim 1.0 release
 ### 26.2.2
 - Workaround to load sprites when installed via gale
 ### 26.2.1

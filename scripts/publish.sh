@@ -51,15 +51,17 @@ if [ "$target" = "Debug" ]; then
 
     mkdir -p "$plug"
     cp "$targetPath/$targetAssembly" "$plug"
+    cp -r "$projectPath/Assets" "$plug/"
     # copy if it exists
     [ -e "$targetPath/$name.pdb" ] && cp "$targetPath/$name.pdb" "$plug"
 fi
 
 if [ "$target" = "Release" ]; then
     packagePath="$projectPath/Package"
-    mkdir -p "$packagePath/plugins"
-    cp "$targetPath/$targetAssembly" "$packagePath/plugins/"
+    mkdir -p "$packagePath/plugins/$name"
+    cp "$targetPath/$targetAssembly" "$packagePath/plugins/$name"
     cp "$projectPath/README.md" "$packagePath/"
+    cp -r "$projectPath/Assets" "$packagePath/plugins/$name/"
 
     if command -v zip > /dev/null; then
         [ -e "$name.zip" ] && rm "$name.zip"

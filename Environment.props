@@ -3,7 +3,7 @@
   <PropertyGroup>
     <!-- Valheim install folder. This is usually found automatically, uncomment to overwrite.
          Needs to be your path to the base Valheim folder. -->
-    <VALHEIM_INSTALL>C:\Program Files (x86)\Steam\steamapps\common\Valheim</VALHEIM_INSTALL>
+    <VALHEIM_INSTALL>/home/johnd/.local/share/Steam/steamapps/common/Valheim</VALHEIM_INSTALL>
 
     <!-- BepInEx install folder. This is usually found automatically, uncomment to overwrite.
          Note the default value $(VALHEIM_INSTALL)\BepInEx requires the VALHEIM_INSTALL property to be set. -->

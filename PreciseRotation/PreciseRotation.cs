@@ -18,7 +18,7 @@ namespace PreciseRotation {
     internal class PreciseRotation : BaseUnityPlugin {
         public const string PluginGUID = "com.github.johndowson.PreciseRotation";
         public const string PluginName = "PreciseRotation";
-        public const string PluginVersion = "26.2.2";
+        public const string PluginVersion = "26.9.0";
         private static readonly Harmony harmony = new(PluginGUID);
 
 
@@ -261,4 +261,3 @@ namespace PreciseRotation {
         }
     }
 }
-
